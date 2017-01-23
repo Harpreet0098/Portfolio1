@@ -1,6 +1,7 @@
 /*********************Counts************************/
 $(function() {
     
+    //############# In-view Detector################
     //Cache reference to window and animation items
     var $animationElements = $('.skillsPercentage span');
     var $window = $(window);
@@ -13,34 +14,46 @@ $(function() {
         var windowBottomPosition = (windowTopPosition + windowHeight);
         //element position
         $.each($animationElements, function() {
-        var $element = $(this);
-        var elementHeight = $element.outerHeight();
-        var elementTopPosition = $element.offset().top;
-        var elementBottomPosition = (elementTopPosition + elementHeight);
- 
-    //check to see if this current container is within viewport
-        if ((elementBottomPosition >= windowTopPosition) &&
-            (elementTopPosition <= windowBottomPosition)) {
-              //Function for counter 
-            function count($this){
-            var current = parseInt($this.html(), 10);
-            $this.html(++current);
-            if(current !== $this.data('count')){
-            setTimeout(function(){count($this)}, 50);
+            var $element = $(this);
+            var elementHeight = $element.outerHeight();
+            var elementTopPosition = $element.offset().top;
+            var elementBottomPosition = (elementTopPosition + elementHeight);
+
+        //check to see if this current container is within viewport
+            if ((elementBottomPosition >= windowTopPosition) &&
+                (elementTopPosition <= windowBottomPosition)){
+                counter();
             }
-        }    
-            
-        $(".skillsPercentage span").each(function() {
-        $(this).data('count', parseInt($(this).html(), 10));
-        $(this).html('0');
-        count($(this));
-       });
-    }           
- });
-}
-   
+        });
+    }
     //Hooking scroll and handling resize event
     $window.on('scroll resize', checkIfInView);
     //Trigger as soon as DOM is ready
-    $window.trigger('scroll',checkIfInView);
+    $window.trigger('scroll',checkIfInView);   
+
+    //#################  Skills Section  #####################
+    counter();
+    //Calls counter function every 10 sec
+    setInterval(counter,10000);
+    // Function to increment 
+    function counter(){
+        //grabbing all the elements in an for each loop.
+            $('.skillsPercentage span').each(function () {
+                //we start from zero
+                //prop is used to set properties for all elements.
+            $(this).prop('Counter',0).animate({
+                //calling an animation property for text
+                Counter: $(this).text()
+            }, {
+                duration: 4000,//time in milliseconds
+                easing: 'swing',//transition
+                step: function (now) {
+                    //set value before it is finally set
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+    }
+
 });
+    
