@@ -3,7 +3,7 @@ $(function() {
     
     //############# In-view Detector################
     //Cache reference to window and animation items
-    var $animationElements = $('.skillsPercentage span');
+    var $animationElements = $('.animation-element');
     var $window = $(window);
     
     //Scroll position detection
@@ -22,7 +22,10 @@ $(function() {
         //check to see if this current container is within viewport
             if ((elementBottomPosition >= windowTopPosition) &&
                 (elementTopPosition <= windowBottomPosition)){
-                counter();
+                $element.addClass('in-view');
+            }
+            else{
+                $element.removeClass('in-view');
             }
         });
     }

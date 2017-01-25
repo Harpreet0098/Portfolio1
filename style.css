@@ -1,5 +1,31 @@
-/* Google Fonts */
-@import url(http://fonts.googleapis.com/css?family=Anonymous+Pro);
+/*********************Global *************************/
+.animation-element {
+    position: relative;
+    opacity: 0;
+}
+
+.animation-element{
+      opacity: 0;
+      -moz-transition: all 500ms ease-in-out;
+      -webkit-transition: all 500ms ease-in-out;
+      -o-transition: all 500ms linear;
+      transition: all 500ms linear;
+      -moz-transform: translate3d(-100px, 0px, 0px);
+      -webkit-transform: translate3d(-100px, 0px, 0px);
+      -o-transform: translate(-100px, 0px);
+      -ms-transform: translate(-100px, 0px);
+      transform: translate3d(-100px, 0px, 0px);
+}
+
+.animation-element.in-view {
+      opacity: 1;
+      -webkit-transition-delay:0.6s;
+      -moz-transform: translate3d(0px, 0px, 0px);
+      -webkit-transform: translate3d(0px, 0px, 0px);
+      -o-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+      transform: translate3d(0px, 0px, 0px);
+    }
 
 /*Navigation Bar*/
 .navbar{
