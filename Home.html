@@ -5,11 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
-    <script src="script.js"></script>
   <link rel="stylesheet" href="style.css">   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
     <!----------------------------BODY-------------------------------------------->
     <body data-spy="scroll" data-target=".navbar">
@@ -51,7 +47,7 @@
    <div id="about">
         <div class="jumbotron">
             <div class="text-center">
-                <h1>ABOUT <span id="me">ME</span></h1>
+                <h2>ABOUT <span id="me">ME</span></h2>
                 <p>"Clean and Minimal design with content-first approach and much focus on usability. Refining the content is probably the most crucial and most overlooked aspect of design. One of my strongest points is Front-end Development. I love figuring out the most maintainable, reusable ways of building components" </p>
                 <h2>What I do?</h2>
                 <p>I'm a graduate in Electrical and Computer Enginnering, loves making Kool stuff. Mostly, you will find me doing front-end development, if not playing with microcontrollers on weird green electronic boards.</p>
@@ -124,7 +120,7 @@
   <div id="workBox">
     <div class="container-fluid">
         <div class="animation-element">
-      <h1>WORK&nbsp;<span class="glyphicon glyphicon-briefcase"></span></h1>
+      <h2>WORK&nbsp;<span class="glyphicon glyphicon-briefcase"></span></h2>
           <div class="workHolder1">
               <h2>3KITS Technologies</h2>
               <h4>Front-End Developer<span>January-November 2014.</span></h4> 
@@ -156,18 +152,18 @@
     <div id="contact">
         <div class="container-fluid">
             <div class="animation-element">
-        <h1>Contact</h1>
+        <h2>Contact</h2>
         <h5>Get in touch with me</h5>
             <div class="row">
                     <div class="col-md-8">
-                        <form>
+                        <form   method="post" enctype="text/plain">
                             <div class="form-group">
                                 <label for="name"></label>
-                                <input type="name" class="form-control" id="name" placeholder="Name">
+                                <input  type="text" name="name" class="form-control" id="name" placeholder="Name">
                                 <label for="email"></label>
-                                <input type="email" class="form-control" id="email" placeholder="Email">
+                                <input  type="text"  name="email" class="form-control" id="email" placeholder="Email">
                                 <label for="comments"></label>
-                                <textarea class="form-control" id="comment" rows="5" placeholder="Message"></textarea>
+                                <textarea class="form-control" type="text" id="comment" rows="5" placeholder="Message"></textarea>
                                 <button type="submit" class="btn btn-default">SEND</button>
                             </div>
                         </form>
@@ -190,6 +186,10 @@
             <p>copyright&copy;2016 Harpreet Singh</p>
         </div>    
     </footer>    
-</body>       
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+ <script src="script.js"></script>        
+    </body>       
 </html>    
     
