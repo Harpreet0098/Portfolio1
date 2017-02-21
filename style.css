@@ -1,3 +1,4 @@
+
 /*********************Global *************************/
 .animation-element {
     position: relative;
@@ -9,6 +10,7 @@
       -moz-transition: all 500ms ease-in-out;
       -webkit-transition: all 500ms ease-in-out;
       -o-transition: all 500ms linear;
+      -ms-transition: all 500ms linear;    
       transition: all 500ms linear;
       -moz-transform: translate3d(-100px, 0px, 0px);
       -webkit-transform: translate3d(-100px, 0px, 0px);
@@ -72,6 +74,7 @@ video {
     position:absolute;
     top:230px;
     -webkit-animation:type 10s steps(40,end);
+    -ms-animation:type 10s steps(40,end);
     animation:type2 10s steps(40,end);
     -webkit-animation-delay:5s;
     animation-delay: 5s;
@@ -116,6 +119,7 @@ video {
 #me{
     position: relative;
    -webkit-animation:transform 2s infinite;
+    -ms-animation:transform 2s infinite;
     animation: transform 4s infinite;
 }
 
@@ -123,6 +127,7 @@ video {
     height: 50px;
     width: 50px;
     -webkit-animation:roll 3s infinite;
+    -ms-animation:roll 3s infinite;
     animation: roll 2s infinite;
     -webkit-transform:rotate(30deg);
     transform: rotate(30deg);
